@@ -1,4 +1,4 @@
-<img src="Insights_HouseRocket/mansion.png">
+<img src="/mansion.png">
 
 # Insights_HouseRocket
 House Rocket is a digital platform and its business model is the purchase and sale of real estate using technology. The houses have different atributes to be considered (number of rooms, location, waterfront, year of built among others). Considering such parametes, which relationships can be described.

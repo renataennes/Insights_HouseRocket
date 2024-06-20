@@ -16,7 +16,7 @@ grid (index for property design and construction), sqft_basement (square measure
 yr_built (year of apartment construction), yr_renovated (year of apartment renovation), zipcode (Postal code), (longitude), lat (latitude), 
 sqft_living15 (square measure of interior space for the 15 closest neighbors), sqft_lot15 (square measure of lots for the 15 closest neighbors).
  
-Solution planning
+Solution planning:
 To identify which houses should be purchased, the following steps were followed:
 -Data collect (The dataset is available in the link: https://www.kaggle.com/harlfoxem/housesalesprediction)
 -Understanding the type of business
@@ -25,7 +25,7 @@ To identify which houses should be purchased, the following steps were followed:
 ​-Understanding
 -Data analysis
 
-Conclusion
+Conclusion:
 The properties were grouped by region (zipcode),
 From the analysis it is understood that the best option would be to acquire properties with prices below the median and with better conditions.
 

@@ -49,8 +49,8 @@ st.title("🏡 House Rocket Data Analysis")
 # Métricas principais
 c1, c2, c3 = st.columns(3)
 c1.metric("Imóveis Disponíveis", len(df_filtered))
-c2.metric("Preço Médio", f"R$ {df_filtered['price'].mean():,.2f}")
-c3.metric("Melhor Oportunidade (CEP)", df.loc[df['value_score'].idxmax(), 'zipcode'])
+c2.metric("Preço Médio", f"$ {df_filtered['price'].mean():,.2f}")
+c3.metric("Melhor Oportunidade (Zipcode)", df.loc[df['value_score'].idxmax(), 'zipcode'])
 
 # Gráfico de Linha (Seaborn-style mas em Plotly para interatividade)
 st.subheader("📈 Preço Médio por Ano de Construção")

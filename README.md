@@ -1,32 +1,42 @@
 <img src="/mansion.png">
 
-# Insights_HouseRocket
-House Rocket is a fictional real estate buying and selling company.
+🏡 House Rocket Business Insights
+House Rocket is a digital platform whose business model is based on the purchase and sale of properties using data analysis. The goal is to identify undervalued assets in the Seattle market to maximize profit margins through strategic resale.
 
-The idea of ​​this project is to present better business opportunities. 
-The strategy for this consists of buying houses in good condition and at low prices, 
-and, sell them for a higher price.
+📈 The Business Problem
+The CEO of House Rocket needs to identify which properties are worth buying and at what price they should be resold. The main challenge is to distinguish "true opportunities" from poor quality listings in a dataset of +21,000 properties.
 
-The attributes of the houses are: 
-id (property identification), date (date of sale of the house), price (price that the owner set for the sale),
-bedrooms (number of rooms), bathrooms (number of bathrooms), sqft_living (measurement of the interior of the apartment),
-sqft_lot (square measure of space), floors (number of floors), waterfront (water view),
-view (index for the quality of the apartment's view),condition (index for the apartment's condition),
-grid (index for property design and construction), sqft_basement (square measurement of space above ground),
-yr_built (year of apartment construction), yr_renovated (year of apartment renovation), zipcode (Postal code), (longitude), lat (latitude), 
-sqft_living15 (square measure of interior space for the 15 closest neighbors), sqft_lot15 (square measure of lots for the 15 closest neighbors).
- 
-Solution planning:
-To identify which houses should be purchased, the following steps were followed:
--Data collect (The dataset is available in the link: https://www.kaggle.com/harlfoxem/housesalesprediction)
--Understanding the type of business
--Data processing
-​-Cleaning
-​-Understanding
--Data analysis
+🛠️ Data Solution & Feature Engineering
+To provide a deeper analysis, I developed a custom Value Score metric:
 
-Conclusion:
-The properties were grouped by region (zipcode),
-From the analysis it is understood that the best option would be to acquire properties with prices below the median and with better conditions.
+Value Score: A ratio between the average price of the region (Zipcode) and the Price per Sqft of the property.
+Price Levels: Categorization of properties into quartiles (Low, Mid-Low, Mid-High, High) to facilitate filtering.
+Location Intelligence: Geospatial analysis to identify clusters of undervalued properties.
 
+💡 Strategic Insights & Purchase Recommendations
+Based on the data analysis, the following strategy was defined to optimize the portfolio:
 
+1. The "Golden Opportunity" Filter
+I recommend purchasing properties that meet these three criteria simultaneously:
+
+Condition: Rated 3 or higher.
+Price: Below the median price for that specific Zipcode.
+Value Score: High (indicating the property is significantly cheaper than its neighbors per square foot).
+
+2. Seasonality & Timing
+Data shows that prices vary by year of construction and renovation status. Properties built before 1950 but with high "Condition" ratings offer the best ROI after minor cosmetic updates.
+
+3. Investment Suggestions
+Buy: Properties in Zipcodes with high price appreciation but currently listed 20% below the local average.
+Sell: Resale price should be the purchase price + 30% (if the purchase was below the median) or purchase price + 10% (if the purchase was above the median).
+
+🚀 How to Run the Project
+Clone the repository: git clone https://github.com/renataennes/Insights_HouseRocket.git
+
+Install dependencies: pip install -r requirements.txt
+
+Run the Dashboard: streamlit run house_application.py
+
+Author: Renata Araújo Ennes
+
+Tools: Python, Pandas, Plotly, Streamlit.
